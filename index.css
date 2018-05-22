@@ -6,6 +6,6 @@ body{
 .logo{
     height: 5em;
 }
-.touch img{
-    height: 2em;
+.touch a{
+    display: block;
 }
