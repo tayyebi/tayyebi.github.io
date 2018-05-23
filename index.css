@@ -1,65 +1,79 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
     font-family: Vazir;
     margin: 0;
-    padding: 0;
-    display: table;
 }
-a{
+
+/* Header/logo Title */
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    display: flex;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    color: white;
+    padding: 14px 20px;
     text-decoration: none;
-    color:inherit;
-}
-.God{
-    display: block;
     text-align: center;
-    background-color: black;
-    margin: 0;
-    color: white;
-    height: 2em;
-    display: table-row;
-}
-.gordarg{
-    display: block;
-    text-align: center;
-    background-color: darkslateblue;
-    color: white;
-    margin: 0;
-    height: 2em;
 }
 
-header{
-    display: table-cell;
-    height: 10%;
-    vertical-align: top;
-    right: 0;
-    width: 40%;
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
+/* Column container */
+.row {  
+    display: flex;
+    flex-wrap: wrap;
 }
-.logo{
-    /* position: absolute;
-    max-width: 15%;
-    right: 20%;
-    top: 20%; */
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
 }
-.logo img{
-    height: 100%;
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+    background-color: #aaa;
     width: 100%;
+    padding: 20px;
 }
-.touch{
-    display: table-cell;
-    overflow: auto;
-    color: white;
-    width: 40%;
-    margin: 0;
-    background-color: darkslateblue;
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
 }
-.touch a{
-    display: block;
-}
-footer{
-    margin: 0;
-    background-color: darkslateblue;
-    display: block;
-    padding: 5em;
-    color: white;
-    display: table-row;    
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row, .navbar {   
+        flex-direction: column;
+    }
 }
