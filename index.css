@@ -2,10 +2,64 @@ body{
     font-family: Vazir;
     margin: 0;
     padding: 0;
+    display: table;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.God{
+    display: block;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    color: white;
+    height: 2em;
+    display: table-row;
+}
+.gordarg{
+    display: block;
+    text-align: center;
+    background-color: darkslateblue;
+    color: white;
+    margin: 0;
+    height: 2em;
+}
+
+header{
+    display: table-cell;
+    height: 10%;
+    vertical-align: top;
+    right: 0;
+    width: 40%;
+
 }
 .logo{
-    height: 5em;
+    /* position: absolute;
+    max-width: 15%;
+    right: 20%;
+    top: 20%; */
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+.touch{
+    display: table-cell;
+    overflow: auto;
+    color: white;
+    width: 40%;
+    margin: 0;
+    background-color: darkslateblue;
 }
 .touch a{
     display: block;
+}
+footer{
+    margin: 0;
+    background-color: darkslateblue;
+    display: block;
+    padding: 5em;
+    color: white;
+    display: table-row;    
 }
