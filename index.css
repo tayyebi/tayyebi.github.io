@@ -49,6 +49,20 @@ body {
     background-color: #f1f1f1;
     padding: 20px;
 }
+.side h4{
+    color: #ddd;
+    background-color: black;
+}
+.side a{
+    color: inherit;
+    padding: .1em;
+    display: block;
+    text-decoration: none;
+}
+.side a:hover {
+    color: #ddd;
+    background-color: black;
+}
 
 /* Main column */
 .main {
