@@ -2,13 +2,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    color: #3f3626;
-    background: #F9FBFF;
+    color: #555555;
+    background: #fcfdff;
     margin: 0;
     padding: 0;
     font-family: 'Sahel', sans-serif;
     font-size: 1.5em;
-    font-weight: 900;
+    font-weight: 700;
     direction: rtl;
 }
 
@@ -47,17 +47,31 @@ article {
     margin: 10vh 5vw 1vh 5vw;
 }
 
+article .heading {
+    display: none;
+}
+
+article h2 {
+    font-weight: 900;
+}
+
+article {
+    padding: 5vw;
+}
+
 article>.letter>p {
     text-indent: 2em;
 }
 
 .opening img {
     margin-right: 2em;
-    width: 4em;
+    width: 2em;
 }
 
 .closing {
     text-align: left;
+    margin-top: 3em;
+    margin-bottom: 1em;
 }
 
 .closing .name,
@@ -68,12 +82,12 @@ article>.letter>p {
 .logo {
     padding-left: 1em;
     width: 6vh;
-    fill: #3f3626;
+    fill: #555555;
 }
 
 footer {
-    background-color: #3f3626;
-    color: #F9FBFF;
+    background-color: #555555;
+    color: #fcfdff;
     margin-top: auto;
     padding: 5vh 5vw 5vh 5vw;
 }
