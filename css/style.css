@@ -1,5 +1,4 @@
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: #555555;
@@ -10,6 +9,8 @@ body {
     font-size: 1.5em;
     font-weight: 700;
     direction: rtl;
+    width: 100%;
+    min-height: 100vh;
 }
 
 a {
