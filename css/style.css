@@ -16,6 +16,53 @@ body {
 a {
     color: inherit;
     text-decoration-color: #75f5fc;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+a:hover {
+    color: #757575;
+}
+
+a[title]:hover::after {
+    margin-right: .3em;
+    padding-right: .3em;
+    padding-left: .3em;
+    content: attr(title);
+    font-size: .7em;
+    font-weight: 500;
+    background-color: #555555;
+    color: #fcfdff;
+    animation: accordion 1s forwards;
+    border-radius: .5em;
+}
+
+a[title]:hover::before {
+    margin-left: .1em;
+    display: inline-block;
+    content: " ";
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555555 transparent transparent;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-decoration-color: #75f5fc;
+    }
+    to {
+        text-decoration-color: #0f7277;
+    }
+}
+
+@-webkit-keyframes accordion {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 header {
