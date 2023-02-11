@@ -1,8 +1,17 @@
+:root {
+    --primary: #569700;
+    --secondary: hsl(86, 100%, 71%);
+    --darkest: #3f2e2e;
+    --dark: #725f5f;
+    --light: #dfd0d0;
+    --ultralight: #fffbf4;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    color: #555555;
-    background: #fcfdff;
+    color: var(--darkest);
+    background: var(--ultralight);
     margin: 0;
     padding: 0;
     font-family: 'Sahel', sans-serif;
@@ -15,14 +24,14 @@ body {
 
 a {
     color: inherit;
-    text-decoration-color: #75f5fc;
+    text-decoration-color: var(--secondary);
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 }
 
 a:hover {
-    color: #757575;
+    color: var(--dark);
 }
 
 a[title]:hover::after {
@@ -32,8 +41,9 @@ a[title]:hover::after {
     content: attr(title);
     font-size: .7em;
     font-weight: 500;
-    background-color: #555555;
-    color: #fcfdff;
+    background-color: var(--darkest);
+    ;
+    color: var(--ultralight);
     animation: accordion 1s forwards;
     border-radius: .5em;
 }
@@ -44,15 +54,15 @@ a[title]:hover::before {
     content: " ";
     border-width: 5px;
     border-style: solid;
-    border-color: transparent #555555 transparent transparent;
+    border-color: transparent var(--dark) transparent transparent;
 }
 
 @-webkit-keyframes glow {
     from {
-        text-decoration-color: #75f5fc;
+        text-decoration-color: var(--secondary);
     }
     to {
-        text-decoration-color: #0f7277;
+        text-decoration-color: var(--primary);
     }
 }
 
@@ -68,8 +78,7 @@ a[title]:hover::before {
 header {
     padding: 2vh 5vw 2vh 5vw;
     font-size: .8em;
-    color: #757575;
-    border-bottom: solid .01em #dfdfdf;
+    border-bottom: solid .01em var(--light);
 }
 
 header nav ul,
@@ -109,6 +118,7 @@ article {
 
 article>.letter>p {
     text-indent: 2em;
+    text-align: justify;
 }
 
 .opening img {
@@ -130,12 +140,14 @@ article>.letter>p {
 .logo {
     padding-left: 1em;
     width: 6vh;
-    fill: #555555;
+    fill: var(--darkest);
+    ;
 }
 
 footer {
-    background-color: #555555;
-    color: #fcfdff;
+    background-color: var(--darkest);
+    font-weight: 900;
+    color: var(--ultralight);
     margin-top: auto;
     padding: 5vh 5vw 5vh 5vw;
 }
