@@ -1,7 +1,7 @@
 // Get all bionic paragraphs
 var biops = document.getElementsByClassName("bionic");
 // Foreach bionic
-for (var i = 0; i < 2; i++) {
+for (var i = 0; i < biops.length; i++) {
     // for (var i = 0; i < biops.length; i++) {
     // Get content and convert to array
     var content = biops[i].innerHTML.split('');
