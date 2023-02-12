@@ -171,7 +171,7 @@ footer {
     width: auto;
 }
 
-.b::first-letter {
+.b {
     background-color: var(--darkest);
     background-image: linear-gradient(45deg, var(--mid), var(--darkest));
     background-size: 100%;
