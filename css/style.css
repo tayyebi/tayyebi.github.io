@@ -10,15 +10,10 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     color: var(--darkest);
     background: var(--ultralight);
     font-family: 'Sahel', sans-serif;
-    font-size: 1.5em;
-    font-weight: 700;
     direction: rtl;
-    padding: 0;
     margin: 0;
 }
 
@@ -40,7 +35,6 @@ a[title]:hover::after {
     padding-left: .3em;
     content: attr(title);
     font-size: .7em;
-    font-weight: 500;
     background-color: var(--darkest);
     color: var(--ultralight);
     animation: accordion 1s forwards;
@@ -76,17 +70,13 @@ a[title]:hover::before {
 
 header {
     padding: 2vh 5vw 2vh 5vw;
-    font-size: .8em;
     border-bottom: solid .01em var(--light);
-    font-weight: 900;
 }
 
-header nav ul,
-address ul {
+header nav ul {
     text-decoration: none;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    font-weight: 900;
 }
 
 header nav ul li {
@@ -115,6 +105,11 @@ article h2 {
 
 article {
     padding: 5vw;
+}
+
+article {
+    font-size: 1.4em;
+    font-weight: 800;
 }
 
 article>.letter>p {
@@ -146,14 +141,6 @@ article>.letter>p {
     fill: var(--warm);
 }
 
-address {
-    background-color: var(--darkest);
-    font-weight: 900;
-    color: var(--ultralight);
-    margin-top: auto;
-    padding: 5vh 5vw 5vh 5vw;
-}
-
 .profile-pic {
     width: 7vw;
     height: 7vw;
@@ -169,12 +156,30 @@ address {
     width: auto;
 }
 
+address {
+    display: block;
+    font-weight: 900;
+    background-color: var(--darkest);
+    color: var(--ultralight);
+}
+
+address ul {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+address ul li {
+    display: inline-block;
+    padding: 3em;
+    font-style: normal;
+}
+
 footer {
     text-align: center;
-    font-weight: 100;
     background-color: var(--darkest);
     color: #fff6e8;
-    font-size: 0.5em;
+    font-size: .7em;
 }
 
 
