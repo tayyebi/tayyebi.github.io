@@ -53,7 +53,11 @@ for (var i = 0; i < biops.length; i++) {
         if (content[indeces[k - 1]] == '>') {
             special = '>';
         } else if (k > 1) {
-            span_b += "</span> ";
+            span_b += "</span>";
+            if (!(content[indeces[k - 1]] == '<' &&
+                    content[indeces[k - 1] + 1] == '/'
+                ))
+                span_b += " ";
         }
         // Start Span
         if (content[indeces[k - 1]] == '<') {
