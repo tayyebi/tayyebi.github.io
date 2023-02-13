@@ -74,8 +74,34 @@ for (var i = 0; i < biops.length; i++) {
 
 var bs = document.getElementsByClassName("b");
 for (var i = 0; i < bs.length; i++) {
+    var lnt = 3;
     var content = bs[i].innerHTML.split('');
-    content.splice(3, 0, "</span>");
+    content.splice(lnt, 0, "</span>");
+    // Connecting words bug in Safari and old browsers
+    if (content.length > lnt + 2 &&
+        (
+            // disconnecting words
+            content[lnt - 1] != 'ا' &&
+            content[lnt - 1] != 'ر' &&
+            content[lnt - 1] != 'ز' &&
+            content[lnt - 1] != 'ژ' &&
+            content[lnt - 1] != 'د' &&
+            content[lnt - 1] != 'ذ' &&
+            content[lnt - 1] != 'و' &&
+            // space
+            content[lnt - 1] != '‌' &&
+            content[lnt + 1] != '‌' &&
+            // blank space
+            content[lnt + 1] != ' ' &&
+            // marks
+            content[lnt + 1] != '.' &&
+            content[lnt + 1] != '؟' &&
+            content[lnt + 1] != ')' &&
+            content[lnt + 1] != '،' &&
+            content[lnt + 1] != '؛'
+        )
+    )
+        content.splice(lnt, 0, "&#x200d;");
     content.splice(0, 0, "<span class=\"bb\">");
     bs[i].innerHTML = content.join('');
 }
