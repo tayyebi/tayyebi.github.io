@@ -167,11 +167,13 @@ address ul {
     margin: 0;
     font-size: 1.5em;
     text-align: center;
+    padding: 3em;
 }
 
 address ul li {
     display: inline-block;
-    padding: 3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     font-style: normal;
 }
 
@@ -180,18 +182,4 @@ footer {
     background-color: var(--darkest);
     color: #fff6e8;
     font-size: .7em;
-}
-
-
-/* BIONIC */
-
-.b {
-    background-color: var(--darkest);
-    background-image: linear-gradient(45deg, var(--mid), var(--darkest));
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
 }

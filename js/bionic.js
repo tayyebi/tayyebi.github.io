@@ -71,3 +71,11 @@ for (var i = 0; i < biops.length; i++) {
     // Replace new content with previous
     biops[i].innerHTML = content.join('');
 }
+
+var bs = document.getElementsByClassName("b");
+for (var i = 0; i < bs.length; i++) {
+    var content = bs[i].innerHTML.split('');
+    content.splice(3, 0, "</span>");
+    content.splice(0, 0, "<span class=\"bb\">");
+    bs[i].innerHTML = content.join('');
+}
