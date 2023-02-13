@@ -3,6 +3,10 @@
 }
 
 #popup {
+    direction: ltr;
     text-align: center;
     margin-bottom: 4em;
+    max-width: 90vw;
+    max-height: 80vw;
+    overflow: auto;
 }
