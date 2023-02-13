@@ -84,7 +84,7 @@ header {
 }
 
 header nav ul,
-footer ul {
+address ul {
     text-decoration: none;
     list-style: none;
     padding: 0;
@@ -148,7 +148,7 @@ article>.letter>p {
     fill: var(--warm);
 }
 
-footer {
+address {
     background-color: var(--darkest);
     font-weight: 900;
     color: var(--ultralight);
@@ -180,4 +180,12 @@ footer {
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+}
+
+footer {
+    text-align: center;
+    font-weight: 100;
+    background-color: var(--darkest);
+    color: #fff6e8;
+    font-size: 0.5em;
 }
