@@ -14,14 +14,12 @@ body {
     flex-direction: column;
     color: var(--darkest);
     background: var(--ultralight);
-    margin: 0;
-    padding: 0;
     font-family: 'Sahel', sans-serif;
     font-size: 1.5em;
     font-weight: 700;
     direction: rtl;
-    width: 100%;
-    min-height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -171,6 +169,17 @@ address {
     width: auto;
 }
 
+footer {
+    text-align: center;
+    font-weight: 100;
+    background-color: var(--darkest);
+    color: #fff6e8;
+    font-size: 0.5em;
+}
+
+
+/* BIONIC */
+
 .b {
     background-color: var(--darkest);
     background-image: linear-gradient(45deg, var(--mid), var(--darkest));
@@ -180,12 +189,4 @@ address {
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-}
-
-footer {
-    text-align: center;
-    font-weight: 100;
-    background-color: var(--darkest);
-    color: #fff6e8;
-    font-size: 0.5em;
 }
