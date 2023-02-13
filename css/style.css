@@ -17,37 +17,25 @@ body {
     margin: 0;
 }
 
+button {
+    all: unset;
+}
+
+button,
 a {
     color: inherit;
+    text-decoration: underline;
     text-decoration-color: var(--secondary);
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
+    cursor: pointer;
 }
 
+button:hover,
+button:focus,
 a:hover {
     color: var(--dark);
-}
-
-a[title]:hover::after {
-    margin-right: .3em;
-    padding-right: .3em;
-    padding-left: .3em;
-    content: attr(title);
-    font-size: .7em;
-    background-color: var(--darkest);
-    color: var(--ultralight);
-    animation: accordion 1s forwards;
-    border-radius: .5em;
-}
-
-a[title]:hover::before {
-    margin-left: .1em;
-    display: inline-block;
-    content: " ";
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent var(--dark) transparent transparent;
 }
 
 @-webkit-keyframes glow {
@@ -56,15 +44,6 @@ a[title]:hover::before {
     }
     to {
         text-decoration-color: var(--primary);
-    }
-}
-
-@-webkit-keyframes accordion {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
 

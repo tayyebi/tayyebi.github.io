@@ -1,0 +1,29 @@
+a[title]:hover::after {
+    margin-right: .3em;
+    padding-right: .3em;
+    padding-left: .3em;
+    content: attr(title);
+    font-size: .7em;
+    background-color: var(--darkest);
+    color: var(--ultralight);
+    animation: accordion 1s forwards;
+    border-radius: .5em;
+}
+
+a[title]:hover::before {
+    margin-left: .1em;
+    display: inline-block;
+    content: " ";
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent var(--dark) transparent transparent;
+}
+
+@-webkit-keyframes accordion {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
