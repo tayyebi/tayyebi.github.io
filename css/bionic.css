@@ -1,7 +1,7 @@
 /* BIONIC */
 
 .b {
-    color: gray;
+    color: var(--mid);
 }
 
 .bb {

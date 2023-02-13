@@ -74,8 +74,12 @@ for (var i = 0; i < biops.length; i++) {
 
 var bs = document.getElementsByClassName("b");
 for (var i = 0; i < bs.length; i++) {
-    var lnt = 3;
     var content = bs[i].innerHTML.split('');
+    var lnt = 3;
+    if (content.length < 4)
+        lnt = 2;
+    if (content.length < 3)
+        lnt = 1;
     content.splice(lnt, 0, "</span>");
     // Connecting words bug in Safari and old browsers
     if (content.length > lnt + 2 &&
