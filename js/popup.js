@@ -16,6 +16,7 @@ popup.innerHTML += `
     <area target="_blank" alt="TradingView" title="TradingView" href="https://www.tradingview.com/u/tayyebi" coords="437,371,557,431" shape="rect">
     <area target="_blank" alt="Miross" title="Miross" href="https://miross.ir" coords="437,490,557,550" shape="rect">
     <area target="_blank" alt="Gordarg" title="Gordarg" href="https://gordarg.com" coords="638,11,758,71" shape="rect">
+    <area target="_blank" alt="Recommendations" title="Recommendation" href="https://kouy.ir/recommendation" coords="638,130,758,189" shape="rect">
     <area target="_blank" alt="P30 Emdad" title="P30 Emdad" href="https://p30emdad.ir" coords="637,570,757,630" shape="rect">
     <area target="_blank" alt="Business Optimization Solutions" title="Business Optimization Solutions" href="https://0pt.ir" coords="637,691,757,751" shape="rect">
     <area target="_blank" alt="Pressez" title="Pressez" href="https://pressz.ir" coords="638,811,758,871" shape="rect">

@@ -14,7 +14,6 @@ body {
     background: var(--ultralight);
     font-family: 'Sahel', sans-serif;
     direction: rtl;
-    margin: 0;
 }
 
 button {
@@ -80,6 +79,7 @@ article .heading {
 article h2 {
     color: var(--warm);
     font-weight: 900;
+    font-size: 1.3em;
 }
 
 article {
@@ -96,6 +96,8 @@ article>.letter>p {
     word-spacing: .3em;
     line-height: 2em;
     text-align: justify;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 .opening img {
@@ -161,4 +163,5 @@ footer {
     background-color: var(--darkest);
     color: #fff6e8;
     font-size: .7em;
+    padding-bottom: 10vh;
 }
