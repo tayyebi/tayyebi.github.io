@@ -9,6 +9,10 @@
     --ultralight: #fffefd;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--darkest);
     background: var(--ultralight);
@@ -33,7 +37,8 @@ a {
 
 button:hover,
 button:focus,
-a:hover {
+a:hover,
+a:hover * {
     color: var(--dark);
 }
 
