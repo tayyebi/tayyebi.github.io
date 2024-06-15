@@ -10,16 +10,13 @@
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#d45500">
     <meta name="description" content="Personal Website of MohammadReza Tayebi">
-    <meta name="keywords" content="mohammad, mohammadreza, mohamadreza, mohamad, reza, محمد, رضا, tayyebi, tayebi, طیبی, طیّبی, محمّد, mba, developer">
+    <meta name="keywords"
+        content="mohammad, mohammadreza, mohamadreza, mohamad, reza, محمد, رضا, tayyebi, tayebi, طیبی, طیّبی, محمّد, mba, developer">
     <meta name="robots" content="index, follow" />
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet"
+        type="text/css" />
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bionic.css">
-    <link rel="stylesheet" href="css/tooltip.css">
-    <link rel="stylesheet" href="css/scroll.css">
-    <link rel="stylesheet" href="css/popup.css">
 </head>
 
 <body>
@@ -35,7 +32,9 @@
     </header>
 
     <article>
-
+        <div id="map">
+            <object data="img/map.drawio.svg" type="image/svg+xml"></object>
+        </div>
     </article>
 
     <address>
@@ -43,14 +42,16 @@
             <li>
                 <a href="mailto:smile@tyyi.net">smile@tyyi.net</a>
             </li>
+            <li>
+                <button id="buttonInstall" style="display:none;">pwa</button>
+            </li>
         </ul>
     </address>
 
     <footer>
     </footer>
 
-    <script src="js/popup.js"></script>
-    <script>map();</script>
+    <script src="app.js"></script>
 </body>
 
 </html>

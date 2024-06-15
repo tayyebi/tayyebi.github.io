@@ -47,6 +47,7 @@ a:hover * {
     from {
         text-decoration-color: var(--secondary);
     }
+
     to {
         text-decoration-color: var(--primary);
     }
@@ -95,6 +96,15 @@ article {
 article {
     font-size: 1.4em;
     font-weight: 700;
+}
+
+#map {
+    direction: ltr;
+    text-align: center;
+    margin-bottom: 4em;
+    max-width: 90vw;
+    max-height: 80vw;
+    overflow: auto;
 }
 
 article>.letter>p {
@@ -170,4 +180,81 @@ footer {
     color: #fff6e8;
     font-size: .7em;
     padding-bottom: 10vh;
+}
+
+
+/* ===== Scrollbar ===== */
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #569700 #ffffff;
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #569700;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+}
+
+/* ===== Animations ===== */
+
+*,
+a,
+button,
+input,
+textarea,
+select {
+    -webkit-transition: display 1s, filter 1s, width 1s, height 1s, background 1s, color 1s, font 1s, box-shadow 2s, -webkit-transform 1s, opacity 2s, border 1s;
+    transition: display 1s, filter 1s, width 1s, height 1s, background 1s, color 1s, font 1s, box-shadow 2s, transform 1s, opacity 2s, border 1s;
+}
+
+/* ===== Tooltips ===== */
+
+a[title]:hover::after {
+    margin-right: .3em;
+    padding-right: .3em;
+    padding-left: .3em;
+    content: attr(title);
+    font-size: .7em;
+    background-color: var(--darkest);
+    color: var(--ultralight);
+    animation: accordion 1s forwards;
+    border-radius: .5em;
+}
+
+a[title]:hover::before {
+    margin-left: .1em;
+    display: inline-block;
+    content: " ";
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent var(--dark) transparent transparent;
+}
+
+@-webkit-keyframes accordion {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== Bionic ===== */
+
+.b {
+    color: var(--mid);
+}
+
+.bb {
+    color: var(--darkest);
 }
