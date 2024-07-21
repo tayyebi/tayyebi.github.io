@@ -135,7 +135,6 @@ article>.letter>p {
 .logo {
     padding-left: 1em;
     width: 6vh;
-    fill: var(--warm);
 }
 
 .profile-pic {

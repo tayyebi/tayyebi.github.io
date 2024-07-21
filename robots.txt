@@ -1,4 +1,3 @@
-Sitemap: https://tyyi.net/sitemap_index.xml
 Sitemap: https://tyyi.net/sitemap.xml
 
 User-agent: *
