@@ -1,6 +1,9 @@
 {
-    "name": "tayyebi",
-    "short_name": "Personal Website of Mohammad R. Tayebi",
+    "name": "Personal Website of Mohammad R. Tayyebi",
+    "short_name": "tayyebi",
+    "theme_color": "#d45500",
+    "background_color": "#fffefd",
+    "display": "standalone",
     "icons": [
         {
             "src": "favicon/android-chrome-192x192.png",
@@ -12,8 +15,5 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ],
-    "theme_color": "#d45500",
-    "background_color": "#fffefd",
-    "display": "standalone"
+    ]
 }
