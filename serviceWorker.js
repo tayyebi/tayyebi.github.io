@@ -1,3 +1,6 @@
+// TODO:
+// https://www.pwabuilder.com/reportcard?site=https://tyyi.net
+
 const cacheName = "tayyebi";
 const assets = [
   "/",

@@ -3,6 +3,8 @@
     "short_name": "tayyebi",
     "theme_color": "#d45500",
     "background_color": "#fffefd",
+    "start_url": "index.html",
+    "orientation": "portrait-primary",
     "display": "standalone",
     "icons": [
         {
