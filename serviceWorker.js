@@ -1,57 +1,54 @@
-// TODO:
-// https://www.pwabuilder.com/reportcard?site=https://tyyi.net
+// This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
 
-const cacheName = "tayyebi";
-const assets = [
-  "/",
-  "/js/app.js",
-  "/index.html",
-  "/css/reset.css",
-  "/css/style.css",
-  "/img/logo.gif",
-  "/favicon.ico",
-  "/favicon/android-chrome-192x192.png",
-  "/favicon/android-chrome-512x512.png",
-  "/favicon/favicon-16x16.png",
-  "/favicon/favicon-32x32.png",
-  "/img/bism.svg",
-  "/img/map.drawio.svg",
-  "/js/bionic.js"
-];
+const CACHE = "pwabuilder-offline-page";
 
-self.addEventListener('install', function (e) {
-  e.waitUntil(
-    caches.open(cacheName).then(function (cache) {
-      return cache.addAll(assets);
-    })
-  );
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
+// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
+const offlineFallbackPage = "ToDo-replace-this-name.html";
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
 
-self.addEventListener('fetch', function (e) {
-  e.respondWith(
-    caches.match(e.request).then(function (response) {
-      return response || fetch(e.request);
-    })
-  );
-});
-
-self.addEventListener('activate', function (event) {
-  var cacheKeeplist = [cacheName];
+self.addEventListener('install', async (event) => {
   event.waitUntil(
-    caches.keys().then(function (keyList) {
-      return Promise.all(
-        keyList.map(function (key) {
-          if (cacheKeeplist.indexOf(key) === -1) {
-            return caches.delete(key);
-          }
-        })
-      );
-    })
+    caches.open(CACHE)
+      .then((cache) => cache.add(offlineFallbackPage))
   );
 });
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/serviceWorker.js').then(function (registration) {
-    registration.update();
-  });
+if (workbox.navigationPreload.isSupported()) {
+  workbox.navigationPreload.enable();
 }
+
+workbox.routing.registerRoute(
+  new RegExp('/*'),
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: CACHE
+  })
+);
+
+self.addEventListener('fetch', (event) => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith((async () => {
+      try {
+        const preloadResp = await event.preloadResponse;
+
+        if (preloadResp) {
+          return preloadResp;
+        }
+
+        const networkResp = await fetch(event.request);
+        return networkResp;
+      } catch (error) {
+
+        const cache = await caches.open(CACHE);
+        const cachedResp = await cache.match(offlineFallbackPage);
+        return cachedResp;
+      }
+    })());
+  }
+});
