@@ -1,6 +1,7 @@
-const cacheName = "aba_app_landing";
+const cacheName = "tayyebi";
 const assets = [
   "/",
+  "/js/app.js",
   "/index.html",
   "/css/reset.css",
   "/css/style.css",
